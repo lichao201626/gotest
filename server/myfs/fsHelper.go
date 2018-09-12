@@ -1,20 +1,27 @@
-package main
+package myfs
 
 import (
 	"io/ioutil"
 	"log"
 	"math/rand"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strconv"
 	"strings"
 )
 
-func writeF(ff string, content interface{}) bool {
+func WriteF(ff string, content interface{}) bool {
 	// var ff = "a/b.abc"
 	w := strings.Split(ff, "/")
+	var dir = ""
 	for k, v := range w {
 		log.Println(k, v)
+		log.Println(len(w))
+		if k != len(w)-1 {
+			dir = dir + v + "/"
+			log.Println(dir)
+		}
 	}
 	var rdNum = rand.Intn(100)
 	log.Println("asdfasdf", rdNum)
@@ -49,10 +56,16 @@ func writeF(ff string, content interface{}) bool {
 
 	}
 	// content := []byte("temporary file's content")
-	var dir = "a"
-	err := os.Mkdir(dir, x)
-	if err != nil {
-		log.Fatal(err)
+	_, e := os.Stat(dir)
+	log.Println(e)
+	if !os.IsExist(e) {
+		log.Println("before make", dir)
+		cmd := exec.Command("mkdir", "-p", dir)
+		err := cmd.Run()
+		// err := os.Mkdir(dir, x)
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	// defer os.RemoveAll(dir) // clean up
@@ -63,8 +76,4 @@ func writeF(ff string, content interface{}) bool {
 		log.Fatal(err)
 	}
 	return true
-}
-
-func main() {
-	writeF("a/test.ls", "hello world")
 }
