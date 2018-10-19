@@ -11,7 +11,7 @@ func main() {
 	// http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	h := http.FileServer(http.Dir("../static"))
 	http.Handle("/static/", http.StripPrefix("/static/", h)) // 启动静态文件服务
-	http.HandleFunc("/a", hand)
+	http.HandleFunc("/", hand)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 

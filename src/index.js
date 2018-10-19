@@ -1,11 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./App";
+// import registerServiceWorker from "./registerServiceWorker";
+import "./scss/grommet.scss";
 
-const renderDom = Component => {
-    render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
-    );
-}
-renderDom(App);
+// import 'whatwg-fetch';
+// import { polyfill as promisePolyfill } from "es6-promise";
+// promisePolyfill();
+
+const element = document.getElementById("example");
+ReactDOM.render(<App />, element);
+// registerServiceWorker();
+//reducer
