@@ -1,7 +1,7 @@
 package myatoi
 
 import (
-	"github.com/lichao201626/gotest/server/letcode/myatoi"
+	"github.com/lichao201626/gotest/server/leetcode/myatoi"
 	"testing"
 )
 

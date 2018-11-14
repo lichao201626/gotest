@@ -1,7 +1,7 @@
 package regexmatch
 
 import (
-	"github.com/lichao201626/gotest/server/letcode/regularexpressionmatching"
+	"github.com/lichao201626/gotest/server/leetcode/regularexpressionmatching"
 	"testing"
 )
 

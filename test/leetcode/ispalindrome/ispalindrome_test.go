@@ -1,7 +1,7 @@
 package myatoi
 
 import (
-	"github.com/lichao201626/gotest/server/letcode/ispalindrome"
+	"github.com/lichao201626/gotest/server/leetcode/ispalindrome"
 	"testing"
 )
 

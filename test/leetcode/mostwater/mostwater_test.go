@@ -1,7 +1,7 @@
 package mostwater
 
 import (
-	"github.com/lichao201626/gotest/server/letcode/mostwater"
+	"github.com/lichao201626/gotest/server/leetcode/mostwater"
 	"testing"
 )
 
