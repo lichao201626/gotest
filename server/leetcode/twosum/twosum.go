@@ -46,7 +46,7 @@ func TwoSum(nums []int, target int) []int {
 } */
 
 // using go map 8ms
-func twoSum(nums []int, target int) []int {
+func TwoSum(nums []int, target int) []int {
 	result := make([]int, 2)
 	num_index_map := make(map[int]int)
 	for i, num := range nums {

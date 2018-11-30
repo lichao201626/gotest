@@ -1,8 +1,9 @@
 package twosum
 
 import (
-	"github.com/lichao201626/gotest/server/leetcode/twosum"
 	"testing"
+
+	"github.com/lichao201626/gotest/server/leetcode/twosum"
 )
 
 func Test_twosum(t *testing.T) {
